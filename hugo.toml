@@ -1,7 +1,7 @@
 baseURL = 'https://tneuqole.com/'
 languageCode = 'en-us'
 title = 'eloquent'
-theme = 'github.com/nodejh/hugo-theme-mini'
+theme = 'mini'
 
 paginate = '3'
 
