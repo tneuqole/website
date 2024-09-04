@@ -1,7 +1,7 @@
 +++
 author = "eloquent"
 title = "Seneca Letter 5"
-date = "2024-08-26"
+date = "2024-09-03"
 description = "Thoughts on Seneca Letter 5"
 tags = [
     "seneca",
