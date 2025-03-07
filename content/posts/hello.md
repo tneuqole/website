@@ -1,10 +1,10 @@
-+++
-author = "eloquent"
-title = "Introduction"
-date = "2024-08-23"
-description = "A short introduction to this blog"
-tags = []
-+++
+---
+author: eloquent
+title: Introduction
+date: 2024-08-23
+description: A short introduction to this blog
+tags:
+---
 
 Welcome to this hidden corner of the internet. I'm going to use this site to record some of my thoughts, and hopefully improve my writing skills along
 the way. For starters, I've been following this [book club](https://www.youtube.com/@acceptingtheuniverse) and slowly reading Seneca's _Letters
