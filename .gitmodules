@@ -1,6 +1,0 @@
-[submodule "themes/mini"]
-	path = themes/mini
-	url = https://github.com/nodejh/hugo-theme-mini.git
-[submodule "themes/tailwind"]
-	path = themes/tailwind
-	url = https://github.com/tomowang/hugo-theme-tailwind.git
