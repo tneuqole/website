@@ -1,7 +1,7 @@
 ---
 author: eloquent
 title: Seneca Letter 7
-date: 2024-10-26
+date: 2024-10-20
 series:
   - Seneca's Letters on Ethics
 description: Thoughts on Seneca Letter 7

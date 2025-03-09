@@ -1,7 +1,7 @@
 ---
 author: eloquent
 title: Seneca Letter 5
-date: 2024-10-26
+date: 2024-09-03
 series:
   - Seneca's Letters on Ethics
 description: Thoughts on Seneca Letter 5
