@@ -4,19 +4,15 @@
   dir="{{ or site.Language.LanguageDirection `ltr` }}"
 >
   <head>
-    {{- if eq hugo.Environment "development" }}
-      <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    {{- end }}
-
     {{ partial "head.html" . }}
 
-    {{ with resources.Get "css/main.css" | postCSS }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" />
-    {{ end }}
   </head>
-  <body class="flex flex-col justify-between bg-frappe text-text">
+  <body class="flex flex-col bg-frappe text-text text-2xl tracking-wide">
     <header>{{ partial "header.html" . }}</header>
-    <main>{{ block "main" . }}{{ end }}</main>
+    <main class="w-full mx-auto">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
     <footer class="align-end">{{ partial "footer.html" . }}</footer>
   </body>
 </html>

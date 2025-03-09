@@ -1,7 +1,18 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <div id="list-page" class="max-w-2xl mx-auto px-6">
+    {{ range site.RegularPages }}
+        <section class="my-3">
+          <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-medium m-0"><a href="{{ .RelPermalink }}" class="text-blue hover:text-lavender">{{ .LinkTitle }}</a></h1>
+            <div class="text-right text-base text-subtext-0">
+              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{ $dateHuman := .Date | time.Format ":date_long" }}
+              <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            </div>
+          </div>
+          <div class="mt-3 mb-9 overflow-clip text-lg">{{ .Summary | plainify | htmlUnescape }}</div>
+        </section>
+    {{ end }}
+  </div>
 {{ end }}
