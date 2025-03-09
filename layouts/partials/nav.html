@@ -1,0 +1,10 @@
+<nav class="p-5 pt-0 mx-auto text-right z-50 text-lg text-blue font-semibold">
+    {{ $linkCSS := "hover:text-lavender px-2"}}
+	{{ if not .IsHome }}
+		<a href="{{ "/" | relURL }}" class="{{ $linkCSS }}"><span class="">←</span>Home</a>
+	{{ end }}
+
+	<a href="{{ "/posts" | relURL }}" class="{{ $linkCSS }}">Posts</a>
+	<a href="{{ "/tags" | relURL }}" class="{{ $linkCSS }}">Tags</a>
+	<a href="{{ "/about" | relURL }}" class="{{ $linkCSS }}">About</a>
+</nav>
