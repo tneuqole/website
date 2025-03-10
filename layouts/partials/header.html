@@ -1,5 +1,16 @@
-{{ partial "nav.html" . }}
+<nav class="p-5 pt-0 mx-auto text-right z-50 text-lg text-blue font-semibold">
+    {{ $linkCSS := "hover:text-lavender px-2"}}
+	{{ if not .IsHome }}
+		<a href="{{ "/" | relURL }}" class="{{ $linkCSS }}"><span class="">←</span>Home</a>
+	{{ end }}
 
-<div class="text-6xl text-text">改善</div>
-<h1 class="text-2xl p-2 text-text font-bold">{{ site.Title }}</h1>
+	<a href="{{ "/posts" | relURL }}" class="{{ $linkCSS }}">Posts</a>
+	<a href="{{ "/tags" | relURL }}" class="{{ $linkCSS }}">Tags</a>
+	<a href="{{ "/about" | relURL }}" class="{{ $linkCSS }}">About</a>
+</nav>
+
+{{ if .IsHome }}
+  <div class="text-6xl text-text">改善</div>
+  <h1 class="text-2xl p-2 text-text font-bold">{{ site.Title }}</h1>
+{{ end }}
 

@@ -1,5 +1,43 @@
 @import "tailwindcss";
 
+/* Restore default styles for common elements */
+@layer base {
+  /* h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  } */
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin-left: 2rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+
+  /*a {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }*/
+}
+
 @theme {
   --color-frappe: #303446;
   --color-rosewater: #f2d5cf;
