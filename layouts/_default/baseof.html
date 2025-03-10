@@ -7,9 +7,9 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="flex flex-col bg-frappe text-text text-2xl tracking-wide m-0 min-h-screen">
+  <body class="flex flex-col bg-frappe text-text tracking-wide m-0 min-h-screen">
     <header class="text-center mt-6 mb-2">{{ partial "header.html" . }}</header>
-    <main class="w-full mx-auto flex-1">
+    <main class="max-w-2xl mx-auto px-6 w-full flex-1">
       {{ block "main" . }}
       {{ end }}
     </main>

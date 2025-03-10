@@ -1,6 +1,7 @@
 {{ define "main" }}
+  {{ partial "profile.html" . }}
   {{ .Content }}
-  <div class="max-w-2xl mx-auto px-6">
+  <div class="">
     {{ range site.RegularPages }}
         <section class="my-3">
           <div class="flex justify-between items-center">
