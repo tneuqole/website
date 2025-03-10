@@ -1,5 +1,4 @@
 ---
-author: eloquent
 title: Seneca Letter 11
 date: 2024-10-26
 series:

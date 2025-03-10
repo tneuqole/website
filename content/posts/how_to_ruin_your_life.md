@@ -1,5 +1,4 @@
 ---
-author: eloquent
 title: How to ruin your life
 date: 2024-11-11
 description: 10 steps to live a meaningless and unfulfilling life

@@ -1,5 +1,4 @@
 ---
-author: eloquent
 title: Introduction
 date: 2024-08-23
 description: A short introduction to this blog

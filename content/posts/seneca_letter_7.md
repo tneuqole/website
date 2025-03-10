@@ -1,5 +1,4 @@
 ---
-author: eloquent
 title: Seneca Letter 7
 date: 2024-10-20
 series:

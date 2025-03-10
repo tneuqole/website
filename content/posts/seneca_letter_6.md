@@ -1,5 +1,4 @@
 ---
-author: eloquent
 title: Seneca Letter 6
 date: 2024-09-28
 series:
