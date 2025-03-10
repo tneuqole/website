@@ -2,7 +2,7 @@
   {{ partial "profile.html" . }}
   {{ .Content }}
   <div class="">
-    {{ range site.RegularPages }}
+    {{ range where .Site.RegularPages "Section" "posts" }}
         <section class="my-3">
           <div class="flex justify-between items-center">
             <h1 class="text-2xl font-medium m-0"><a href="{{ .RelPermalink }}" class="text-blue hover:text-lavender">{{ .LinkTitle }}</a></h1>
