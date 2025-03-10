@@ -1,8 +1,26 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+  {{ partial "profile.html" . }}
+
+  {{ range .Pages.GroupByDate "2006" }}
+    <h2 class="mb-4 text-2xl text-text font-semibold"> {{ .Key }} </h2>
+    {{ range .Pages }}
+      <div class="flex flex-row justify-between my-2 text-lg">
+        <div class="flex flex-row">
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format "Jan 2" }}
+          <time datetime="{{ $dateMachine }}" class="min-w-15 text-subtext-0">{{ $dateHuman }}</time>
+
+          <a href="{{ .RelPermalink }}" class="mx-3 text-blue hover:text-lavender font-medium">{{ .Title }}</a>
+        </div>
+
+        {{ with .Params.tags }}
+          <div class="flex flex-row self-end">
+            {{ range . }}
+              <a href="{{ "tags/" | absURL }}{{ . }}" class="bg-surface-2 text-text text-sm px-2 py-1 mr-1">{{ . }}</a>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
   {{ end }}
 {{ end }}
