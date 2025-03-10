@@ -1,0 +1,36 @@
+{{ define "main" }}
+  {{ partial "profile.html" . }}
+  {{ .Content }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") 5 }}
+    {{ range $paginator.Pages }}
+        <section class="my-3">
+          <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-medium m-0">
+              <a href="{{ .RelPermalink }}" class="text-blue hover:text-lavender">{{ .LinkTitle }}</a>
+            </h1>
+            <div class="text-right text-base text-subtext-0">
+              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{ $dateHuman := .Date | time.Format "Jan 2, 2006" }}
+              <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            </div>
+          </div>
+          <div class="mt-3 mb-9 overflow-clip text-lg">{{ .Summary }}</div>
+        </section>
+    {{ end }}
+
+    <div class="flex flex-row justify-between items-center mt-5">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="flex-1 text-left text-blue hover:text-lavender">&larr; Newer Posts</a>
+      {{ else }}
+        <div class="flex-1"></div>
+      {{ end }}
+
+      <div class="flex-1 text-center text-subtext-0">Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</div>
+
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="flex-1 text-right text-blue hover:text-lavender">Older Posts &rarr;</a>
+      {{ else }}
+        <div class="flex-1"></div>
+      {{ end }}
+    </div>
+{{ end }}

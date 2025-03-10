@@ -1,0 +1,18 @@
+<!doctype html>
+<html
+  lang="{{ site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}"
+  class="h-full"
+>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="flex flex-col bg-frappe text-text tracking-wide m-0 min-h-screen">
+    <header class="text-center mt-6 mb-2">{{ partial "header.html" . }}</header>
+    <main class="max-w-2xl mx-auto px-6 w-full flex-1">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+    <footer class="mt-10 mb-10 text-center text-lg">{{ partial "footer.html" . }}</footer>
+  </body>
+</html>

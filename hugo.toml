@@ -1,18 +1,6 @@
 baseURL = 'https://tneuqole.com/'
 languageCode = 'en-us'
-title = 'eloquent'
-theme = 'mini'
-
-paginate = '3'
-
-[social]
-github = 'https://github.com/tneuqole'
-twitter = 'https://x.com/stoicgamer'
+title = 'stoic gamer'
 
 [params]
-author = "eloquent"
-bio = "Knowledge seeker"
-description = "Random thoughts and advice to myself"
-enableRss = false
-enableComments = false
-enableGoogleAnalytics = false
+

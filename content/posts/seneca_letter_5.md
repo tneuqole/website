@@ -1,14 +1,14 @@
-+++
-author = "eloquent"
-title = "Seneca Letter 5"
-date = "2024-09-03"
-description = "Thoughts on Seneca Letter 5"
-tags = [
-    "seneca",
-    "stoicism",
-    "philosophy"
-]
-+++
+---
+title: Seneca Letter 5
+date: 2024-09-03
+series:
+  - Seneca's Letters on Ethics
+description: Thoughts on Seneca Letter 5
+tags:
+  - seneca
+  - stoicism
+  - philosophy
+---
 
 Walk the middle path. The key to life lies in avoiding extremes. There is no enlightenment to be found in starvation, nor in indulgence. Do not
 use philosophy as an excuse for degeneracy. Staking your happiness on worldly possessions and subjecting yourself to poverty lead to the same

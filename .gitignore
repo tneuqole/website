@@ -1,1 +1,4 @@
-public
+public/
+node_modules/
+resources/
+TODO.md

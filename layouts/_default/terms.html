@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ partial "profile.html" . }}
+  <div class="flex flex-wrap text-center justify-center mt-3">
+    {{ range $key, $value := .Data.Terms.ByCount }}
+      {{ if ($value.Name) }}
+          <a href="{{ "tags/" | relURL }}{{ $value.Name | urlize }}" class="bg-surface-2 text-text text-sm px-2 py-1 m-1">
+            {{ $value.Name }} <span>({{ $value.Count }})</span>
+          </a>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
